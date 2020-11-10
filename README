@@ -1,0 +1,24 @@
+Tema 3 - Banica Cosmin 321CA
+
+Client:
+In implementarea solutiei se foloseste biblioteca nlohmann de parsare JSON (prin fisierul json.hpp
+inclus in arhiva). S-a ales aceasta biblioteca datorita usurintei in lucrul cu token-uri JSON.
+Atunci cand se preia un JSON de la un mesaj primit, mai intai se plaseaza pointerul la inceputul
+sectiunii DATA, iar apoi se foloseste functia din nlohmann parse(). Pentru a forma un obiect de tipul
+JSON se foloseste metoda cu accesorul [] pentru a crea campurile, iar apoi utilitarul dump() pentru
+a transforma in string.
+
+Modul de functionare a clientului este urmatorul: intr-o bucla while se asteapta input de la tastatura
+care reprezinta o comanda. In cazul in care inputul nu corespunde niciunei comenzi valide se afiseaza
+un mesaj corespunzator. Altfel, se trateaza pentru fiecare comanda operatiile specifice, iar in caz
+de eroare datorata inputului neadecvat sau vreunei probleme din comunicatia cu serverul se afiseaza
+care este problema.
+
+Fisiere ajutatoare:
+Fisierele requests.cpp si helper.cpp contin cod din rezolvarea laboratorului HTTP.
+
+Mod de rulare:
+
+- make build : compileaza sursa
+- make run: compileaza sursa in caz ca aceasta nu exista si apoi o sterge
+- make clean: sterge sursa
